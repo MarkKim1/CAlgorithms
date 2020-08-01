@@ -1,5 +1,5 @@
 #ifndef ___IntStack
-#defind ___IntStack
+#define ___IntStack
 
 typedef struct{
   int max;
