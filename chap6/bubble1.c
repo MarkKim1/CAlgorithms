@@ -2,6 +2,7 @@
 #include<stdlib.h>
 //#define swap (int,int x,int y) do { arr = x; x = y; y = t; } while(0) 
 // type 은 int,string 등을 얘기 하는것이다.
+// time complexity is O(n^2)
 
 void change(int* x, int* y)
 {
@@ -13,18 +14,15 @@ void change(int* x, int* y)
 void bubble(int a[], int n)
 {
   int i,j,k=0;
-  for(i = 0; i < n-1; i++)
+  for(i = n-1; i >= 0; i--)
   {
     for(j = i; j < n-1; j++)
     {
       if(a[j] >= a[j+1])
       {
-        //printf("%d -- %d",a[j])
         change(&a[j],&a[j+1]);
-        k++;
       }
     }
-     k = 0;
   }
 }
 
