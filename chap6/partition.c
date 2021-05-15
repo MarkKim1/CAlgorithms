@@ -28,7 +28,7 @@ void partition(int a[], int n)
   }while(pl <= pr);
   printf("피벗의 값은 %d입니다.\n", x);
   printf("피벗 이하의 그룹\n");
-  for(int i = 0; i <= pl-1; i++)
+  for(int i = 0; i <= pl-1; i++
   {
      printf("%d ", a[i]);
   }
