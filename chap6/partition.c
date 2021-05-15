@@ -14,7 +14,7 @@ void partition(int a[], int n)
   int i;
   int pl = 0; //왼쪽 커서 
   int pr = n -1; // 오른쪽 커서
-  int x = a[n/2]; // 피벗은 가운데 요소를 선택합니다.
+  int x =a[n/2]; // 피벗은 가운데 요소를 선택합니다.
 
   do{
     while(a[pl] < x) pl++;
