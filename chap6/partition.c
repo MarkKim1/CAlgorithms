@@ -30,7 +30,7 @@ void partition(int a[], int n)
   printf("피벗 이하의 그룹\n");
   for(int i = 0; i <= pl-1; i++)
   {
-     
+     printf("%d ", a[i]);
   }
 
 }
