@@ -1,13 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void swap(int *x, int *y)
-{
-  int *temp;
-  temp = x;
-  x = y;
-  y = temp;
-}
+#define swap(type,x,y) do{ type t = x; x=y; y=t;}while(0)
 
 void partition(int a[], int n)
 {
@@ -21,17 +15,33 @@ void partition(int a[], int n)
     while(a[pr] > x) pr++;
     if(pl <= pr)
     {
-      swap(&a[pl],&a[pr]);
+      swap(int, a[pl],a[pr]);
       pl++;
       pr--;
     }
   }while(pl <= pr);
   printf("피벗의 값은 %d입니다.\n", x);
   printf("피벗 이하의 그룹\n");
-  for(int i = 0; i <= pl-1; i++)
+  for(i = 0; i <= pl-1; i++)
   {
-     printf("%d ", a[i]);
+    printf("%d ,", a[i]);
   }
+  putchar('\n');
+  if(pl > pr+1){
+    printf("피벗과 일치하는 그룹\n");
+    for( i = pr+1; i <= pl-1; i++)
+    {
+      printf("%d ", a[i]);
+     
+    } 
+    putchar('\n');
+  }
+  printf("피벗 이상의 그룹\n");
+  for(i = pr+1; i < n;i++)
+  {
+    printf("%d ", a[i]);
+  }
+  putchar('\n');
 
 }
 
@@ -44,7 +54,7 @@ int main ()
   scanf("%d",&nx);
   x = calloc(nx,sizeof(int));
   for(int i = 0; i < nx; i++){
-    printf("x[%d]", x[i]);
+    printf("x[%d]: ", i);
     scanf("%d", &x[i]);
   }
 
