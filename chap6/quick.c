@@ -5,8 +5,6 @@
 int main ()
 {
     int i,nx;
-
-
-
+    printf("hello world");
     return 0;
 }
