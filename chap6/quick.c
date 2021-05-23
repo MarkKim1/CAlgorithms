@@ -5,6 +5,15 @@
 int main ()
 {
     int i,nx;
-    printf("hello world");
+    int *x;
+    puts("퀵 정렬");
+    printf("요소 개수 :");
+    scanf("%d", &nx);
+    x = calloc(nx, sizeof(int));
+    for(i = 0; i < nx; i++)
+    {
+        printf("x[%d] :", i);
+        scanf("%d", &x[i]);
+    }
     return 0;
 }
